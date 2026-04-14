@@ -1,38 +1,87 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-  float n1,n2,res;
+  double n1,n2,res;
   int op=0;
-  printf("Bienvenida a mi calculadora\n");
-  printf("Escoge una opción\n");
-  printf("1.-Suma\n");
-  printf("2.-Resta\n");
-  printf("3.-Multiplicación\n");
-  printf("4.-Division\n");
-  printf("opcion: ");
-  scanf("%d",&op);
-  printf("Ingresa dos cantidades separadas por espcio \n");
-  scanf("%f %f",&n1,&n2);
-  switch(op)
+
+  do
+  {
+    printf("Bienvenida a mi calculadora\n");
+    printf("Escoge una opción\n");
+    printf("1.-Suma\n");
+    printf("2.-Resta\n");
+    printf("3.-Multiplicación\n");
+    printf("4.-Division\n");
+    printf("5.-Raiz Cuadrada\n");
+    printf(6.-Potencia\n");
+    printf(7.-Salida\n");
+    do
+    {
+      printf("opcion: ");
+      scanf("%d",&op);
+    }
+    while(op < 1 || op > 7);
+
+    if(op != 7)
+    {
+       if(op ==5)
+       {
+          printf("Ingresa la cifra para raiz: ");
+          scanf("%lf", &n1);
+          if(num1 < 0)
+          {
+             do
+             {
+               printf("Numero no valido, dame otro numero: ");
+               scanf("%lf", &n1);
+             }
+             while(n1 < 0);
+          }
+       }
+       else
+       {
+          if(op == 4)
+          {
+               printf("Ingrese la pirmera cifra: ");
+               scanf("%lf", n1);
+               printf("Ingrese la segunda cifra: ");
+               scanf("%lf", n2);
+               if (n2 == 0);
+               {
+                   do
+                   {
+                       printf("No se puede dividir por cero, ingrese otro numero: ");
+                       scanf("%lf", n2);
+                   }
+   
+   
+
+
+
+          switch(op)
+    }
   {
     Default:
       printf("Opción no valida");
     case 1:
       res=n1+n2;
-      printf("El resultado es %f\n",res);
       break;
     case 2:
       res=n1-n2;
-      printf("El resultado es %f\n",res);
       break;
     case 3:
       res=n1*n2;
-      printf("El resultado es %f\n",res);
       break;    
     case 4:
       res=n1/n2;
-      printf("El resultado es %f\n",res);
+      break;
+    case 5:
+      res= sqrt(n1);
+      break;
+    caso 6:
+      res= pow(n1, n2);
       break;
   }
   return 0;
